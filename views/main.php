@@ -85,7 +85,7 @@
 		
 		var name = '<?php echo $login_name ?>';
 			
-		$('.user-bar').hover(
+		$('.user').hover(
 		function(){
 			$('.lia').hide();
 			$('.user').html('<a href="/logout">Logout</a>');
