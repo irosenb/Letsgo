@@ -83,7 +83,7 @@
 		// 	serviceUrl: '/api/get_events'
 		// });
 		
-		var name = <?php echo $login_name ?>;
+		var name = '<?php echo $login_name ?>';
 			
 		$('.user-bar').hover(
 		function(){
