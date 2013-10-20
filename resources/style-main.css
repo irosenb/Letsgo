@@ -77,9 +77,9 @@
 /* Event Elements */
 
 .event-wrapper{
-	margin: 0px 10px;
+	margin: 10px 10px 0px 10px;
 	height: 100px;
-	border-bottom: 1px solid #2db522
+	border-bottom: 1px solid #2db522;
 	
 }
 
@@ -90,6 +90,8 @@
 
 .event-a:hover{
 	text-decoration: underline;	
+	background-color: #EEEEEE;
+
 
 }
 
