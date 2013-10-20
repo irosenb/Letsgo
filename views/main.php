@@ -72,6 +72,10 @@
 			$('#search-box').focus();
 		});
 
+		$('#search-box').keyup(function() {
+			if($('#results').is(':hidden')) $('#returntosearch').click();
+		});
+
 		$('#results').load('/api/search');
 		$('#search-box').searchbox();
 
