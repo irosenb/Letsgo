@@ -14,7 +14,6 @@
 <div class="background">
 
 <div class="user-bar">
-Logged in as <div class="user">First Last</div>
 
 </div>
 
@@ -25,24 +24,16 @@ Logged in as <div class="user">First Last</div>
 			</div>
 		</div>
 
-		<div class="search-wrapper">
-			<div class="search">
-					I want to go to<input id="search-box" type="text" placeholder="a movie">.
-			</div>
-			<div class="create">
-				<input type="button" class="button" id="create-button" value="Create a New Event">
-			</div>
-		</div>
+	
 
 		<div class="stream-wrapper">
-		
-			<div class="event-wrapper">
-				<a href="" class="event-a">
-					<img class="event-photo" src="http://placehold.it/90x90">
-					<div class="event-title">Event Title</div>
-					<div class="event-date">Saturday, October 19th at 10:00PM</div>
-					<div class="event-location">Location Name</div>	
-				</a>
+
+			<div id="loginform">
+				<form action="" method="POST">
+					<label for="username"></label><input class="login-field" id="username" type="text" name="username" placeholder="Username"><br />
+					<label for="password"></label><input class="login-field" id="password" type="password" name="password" placeholder="Password"><br />
+					<input type="submit" class="button login-button" value="Login"><br/>
+				</form>
 			</div>
 		
 		</div>

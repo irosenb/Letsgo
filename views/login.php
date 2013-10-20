@@ -2,8 +2,8 @@
 
 <div id="loginform">
 	<form action="/login" method="POST">
-		<label for="email">Email address:</label> <input id="email" type="email" name="email" placeholder="Email address"><br />
-		<label for="password">Password:</label> <input id="password" type="password" name="password" placeholder="Password"><br />
-		<input type="submit" value="Login"><br/>
+		<label for="username"></label><input class="login-field" id="username" type="text" name="username" placeholder="Username"><br />
+		<label for="password"></label><input class="login-field" id="password" type="password" name="password" placeholder="Password"><br />
+		<input type="submit" class="button login-button" value="Login"><br/>
 	</form>
 </div>
