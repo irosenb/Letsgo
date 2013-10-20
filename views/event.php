@@ -19,4 +19,6 @@
 	<h3>Who's coming?</h3>
 	<div><?php echo implode(', ', $attendees); ?></div>
 	
+	<input type="button" class="button" id="signup" value="I'll Go!">
+	
 </div>
