@@ -6,7 +6,7 @@ class Database {
 
         public function __construct() {
                 try {
-                        require_once('./config.php');
+                        require_once('./databases.inc.php');
                         $conn = new PDO('mysql:host=localhost;dbname=' . DB_NAME,
                                 DB_USER,
                                 DB_PASS);
