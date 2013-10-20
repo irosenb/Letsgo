@@ -1,5 +1,6 @@
 <p><?php echo $message ?></p>
 
+<link href="/resources/style-main.css" rel="stylesheet" type="text/css">
 
 <div class="search-wrapper">
 	<div class="search">

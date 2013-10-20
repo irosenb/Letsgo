@@ -1,4 +1,4 @@
-<link href="style-login.css" rel="stylesheet" type="text/css">
+<link href="/resources/style-login.css" rel="stylesheet" type="text/css">
 
 
 <div id="loginform">
