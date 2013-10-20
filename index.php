@@ -67,6 +67,11 @@ Flight::route('/api/event/@eid:[0-9]+', function($eid){
 	Flight::render('event', $event);
 });
 
+Flight::route('/api/join_event/@eid:[0-9]+', function($eid){
+	$event = new Event($eid);
+	echo $event->add_attendee($eid);
+});
+
 Flight::route('POST /api/create_event', function(){
 	$new = new Event();
 	$time_start = str_replace("T", " ", $_POST['time_start']);

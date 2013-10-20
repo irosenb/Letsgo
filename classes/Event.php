@@ -13,7 +13,7 @@ class Event {
 	public function search($term = false) {
 		$sql = "SELECT * FROM events WHERE title LIKE ? AND (time_end > NOW() OR time_start >= NOW())";
 		$query = $this->db->prepare($sql);
-		$query->execute(array('%' . $term . '%'));
+		$query->execute(array('%' . str_replace(' ', '%', $term) . '%'));
 		return $query->fetchAll();
 	}
 
@@ -59,7 +59,7 @@ class Event {
 		if(!$eid) $eid = $this->eid;
 		$sql = "INSERT INTO users_events(uid, eid) VALUES (?, ?)";
 		$query = $this->db->prepare($sql);
-		$query->execute(array($_SESSION['uid'], $eid));
+		return $query->execute(array($_SESSION['uid'], $eid));
 	}
 
 	public function create_event($title, $description, $location, $time_start, $time_end) {
@@ -69,9 +69,7 @@ class Event {
 		if($query->execute(array($title, $description, $location, $time_start, $time_end))) {
 			$this->eid = $this->db->lastInsertId();
 
-			$sql = "INSERT INTO users_events(uid, eid) VALUES (?, ?)";
-			$query = $this->db->prepare($sql);
-			$query->execute(array($_SESSION['uid'], $this->eid));
+			$this->add_attendee($this->eid);
 
 			return $this->eid;
 		} else {
