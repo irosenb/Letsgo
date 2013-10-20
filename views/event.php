@@ -24,7 +24,6 @@
 </div>
 
 <script>
-
 	$(document).ready(function() {
 		$('#signup').click(function(e){
 			$this = $(this);
@@ -33,6 +32,5 @@
 					$('#eventdetail').load('/api/event/' + $this.data('eid'));
 				});
 		});
-
-
+	});
 </script>
