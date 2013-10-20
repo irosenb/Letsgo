@@ -12,7 +12,7 @@
 <div class="stream-wrapper">
 
 	<!-- Below is a template for an event -->
-
+<?php /*
 	<div class="event-wrapper">
 		<a href="" class="event-a">
 			<img class="event-photo" src=<?php echo $image ?> <!-- http://placehold.it/90x90 -->
@@ -21,7 +21,6 @@
 			<div class="event-location"><?php echo $location ?></div>	
 		</a>
 	</div>
+*/ ?>
 
 </div>
-
-<p><?php echo $message ?></p>

@@ -19,7 +19,7 @@
 
 <?php if(!(isset($loginpage) && $loginpage)): ?>
 	<div class="user-bar">
-	Logged in as <div class="user">	<?php echo $login_name ?></div>
+	Logged in as <div class="user"><?php echo $login_name ?></div>
 	</div>
 <?php endif ?>
 

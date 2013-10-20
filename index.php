@@ -16,7 +16,8 @@ session_start();
 
 Flight::route('GET /', function(){
 	if(isset($_SESSION['uid']) && $_SESSION['uid'] != 0) {
-		Flight::render('main', array(), 'content');
+		$user = new User($_SESSION['uid']);
+		Flight::render('main', array('login_name' => $user->get_name()), 'content');
 		Flight::render('layout');
 	} else {
 		Flight::render('login', array(), 'content');
