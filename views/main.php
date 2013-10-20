@@ -82,5 +82,6 @@
 		// $('#search-box').autocomplete({
 		// 	serviceUrl: '/api/get_events'
 		// });
+		function(){
 	});
 </script>
