@@ -27,7 +27,7 @@ Flight::route('GET /', function(){
 
 Flight::route('POST /login', function(){
 	$auth = new User();
-	if($_POST['login']) {
+	if(isset($_POST['login'])) {
 		$auth = $auth->authenticate($_POST['email'], $_POST['password']);
 		if($auth) {
 			$_SESSION['uid'] = $auth;
@@ -35,6 +35,10 @@ Flight::route('POST /login', function(){
 		} else {
 			Flight::redirect('/');
 		}
+	} elseif(isset($_POST['register'])) {
+		$auth->create_user($_POST['name'], $_POST['password'], $_POST['email'], $_POST['phone']);
+		$_SESSION['uid'] = $auth->uid;
+		Flight::redirect('/');
 	}
 });
 

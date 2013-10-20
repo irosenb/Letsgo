@@ -2,7 +2,7 @@
 
 class user {
 	private $db;
-	private $uid;
+	public $uid;
 
 	public function __construct($uid = false) {
 		$db = new Database();
@@ -24,5 +24,13 @@ class user {
 		$query = $this->db->prepare($sql);
 		$query->execute(array($uid));
 		return $query->fetchAll()[0]['name'];
+	}
+
+	public function create_user($name, $password, $email, $phone) {
+		$sql = "INSERT INTO users(name, sha1, email, phone) VALUES (?, ?, ?, ?)";
+		$query = $this->db->prepare($sql);
+		$query->execute(array($name, sha1($password), $email, $phone));
+		$this->uid = $this->db->lastInsertId();
+		return $this->uid;
 	}
 }
