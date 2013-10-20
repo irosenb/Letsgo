@@ -38,6 +38,7 @@ class Event {
 		$query->execute(array($eid));
 		$result = $query->fetchAll()[0];
 		$result['attendees'] = $this->attendees($eid);
+		$result['is_attendee'] = $this->is_attendee($eid);
 		return $result;
 	}
 
@@ -53,6 +54,16 @@ class Event {
 		}
 
 		return $attendees;
+	}
+
+	public function is_attendee($eid = false) {
+		if(!$eid) $eid = $this->eid;
+		$sql = "SELECT eid FROM users_events WHERE uid=? AND eid=?";
+		$query = $this->db->prepare($sql);
+		$query->execute(array($_SESSION['uid'], $eid));
+		$results = $query->fetchAll();
+
+		return (empty($results)) ? false : true;
 	}
 
 	public function add_attendee($eid = false) {

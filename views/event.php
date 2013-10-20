@@ -19,7 +19,9 @@
 	<h3>Who's coming?</h3>
 	<div><?php echo implode(', ', $attendees); ?></div>
 	
+	<?php if(!$is_attendee): ?>
 	<input type="button" class="button" id="signup" value="I'll Go!" data-eid="<?php echo $eid; ?>">
+	<?php endif; ?>
 	
 </div>
 
