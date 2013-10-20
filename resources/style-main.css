@@ -1,72 +1,120 @@
+/*User Bar*/
 
-body{
-	margin: 0px;
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #646464;
+.user-bar{
+	
+	float: right;
+	margin: 5px;
+	font-size: 12px;
 }
 
-.background{
-
-	position: absolute;
-	height: 100%;
-	width: 100%;
+.user{
 	
-	background-color: #ececec;
-}
-
-.body-wrapper{
-	
-	width: 80%;
-	min-width: 380px;
-	max-width: 800px;
-	margin: 50px auto;
-	background-color: #FFFFFF;
-	
-	
-}
-
-/* Header */
-
-.header-wrapper{
-	
-	height: 40px;
-	padding: 10px;
+	display: inline;
+	padding: 1px 6px 2px 6px;
+	border-radius: 4px;
 	background-color: #2db522;
-
-}
-
-.header-text{
 	color: #FFFFFF;
+	
+}
+
+/* Search/Create */
+
+.search-wrapper{
+	
+	border: 5px solid #2db522;
+	border-bottom: none;
+	border-top: none;
+	padding: 10px;
+
+	
+}
+
+.search{
+	
+	font-size: 18px;
 	text-align: center;
-	font-size: 30px;
-	font-family: 'Kaushan Script', cursive;
 	
 }
 
-
-/* Footer */
-
-.footer-wrapper{
-	height: 20px;
-	background-color: #2db522;
-
-}
-
-/* Custom IU Elements */
-
-.button{
+.create{
 	
-	background-color: #2db522;
-	border: none;
-	color: white;
+	margin-top: 10px;
+	width: 40%;
 	height: 25px;
-	font-size: 14px;
+	margin: 10px 30%;
 	
 }
 
-.button:hover{
+#create-button{
 	
-	background-color: #25951d;
-	cursor: hand;
+	width: 100%
+}
+
+#search-box{
+	
+	border: none;
+	border-bottom: 1px solid #646464;
+	outline: none;
+	color: #2db522;
+	height: 18px;
+	font-size: 16px;
+
+	
+}
+
+/* Event Stream */
+
+.stream-wrapper{
+	
+	border: 5px solid #2db522;
+	border-bottom: none;
+	border-top: none;
+	min-height: 400px;
+
+
+}
+
+/* Event Elements */
+
+.event-wrapper{
+	margin: 0px 10px;
+	height: 100px;
+	border-bottom: 1px solid #2db522
+	
+}
+
+.event-a{
+	text-decoration: none;
+	color: #2db522;
+}
+
+.event-a:hover{
+	text-decoration: underline;	
+
+}
+
+.event-photo{
+	float: left;
+	margin-right: 10px;
+	
+}
+
+.event-title{
+	color: #2db522;
+	font-size: 18px;
+	
+}
+
+.event-date{
+	color: #646464;
+	font-size: 14px;
+
+	
+}
+
+.event-location{
+	color: #646464;
+	font-size: 16px;
+
 	
 }

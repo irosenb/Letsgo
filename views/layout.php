@@ -1,9 +1,5 @@
 
 <!DOCTYPE html>
-
-
-<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -15,17 +11,18 @@
 
 <body>
 <div class="background">
-<div class="user-bar">
-Logged in as <div class="user">	<?php echo $login_name ?></div>
 
-</div>
+<?php if(!(isset($loginpage) && $loginpage)): ?>
+	<div class="user-bar">
+	Logged in as <div class="user">	<?php echo $login_name ?></div>
+	</div>
+<?php endif ?>
 
-		<div class="body-wrapper">
-		
-			<div class="header-wrapper">
-				<div class="header-text">
-					Let's Go!
-				</div>
+	<div class="body-wrapper">
+	
+		<div class="header-wrapper">
+			<div class="header-text">
+				Let's Go!
 			</div>
 
 		<?php echo $content ?>

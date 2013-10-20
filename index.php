@@ -4,6 +4,7 @@ require 'flight/Flight.php';
 // custom classes
 require 'classes/Database.php';
 require 'classes/Event.php';
+require 'classes/User.php';
 
 session_start();
 
@@ -14,15 +15,29 @@ session_start();
 // where $data is an array of variables to be passed to views/view_file.php
 
 Flight::route('GET /', function(){
-	$data['message'] = "Hello world!";
-
-	Flight::render('main', $data, 'content');
-	Flight::render('layout', array('title' => 'Home'));
+	if(isset($_SESSION['uid']) && $_SESSION['uid'] != 0) {
+		Flight::render('main', array(), 'content');
+		Flight::render('layout');
+	} else {
+		Flight::render('login', array(), 'content');
+		Flight::render('layout', array('loginpage' => true));
+	}
 });
 
-Flight::route('GET /login', function(){
-	Flight::render('login', array(), 'content');
-	Flight::render('layout', array('title' => 'Home'));
+Flight::route('POST /login', function(){
+	$auth = new User();
+	$auth = $auth->authenticate($_POST['email'], $_POST['password']);
+	if($auth) {
+		$_SESSION['uid'] = $auth;
+		Flight::redirect('/');
+	} else {
+		Flight::redirect('/');
+	}
+});
+
+Flight::route('GET /logout', function(){
+	session_destroy();
+	Flight::redirect('/');
 });
 
 Flight::route('/api/get_events', function(){
