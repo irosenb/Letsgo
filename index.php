@@ -42,7 +42,7 @@ Flight::route('GET /logout', function(){
 
 Flight::route('/api/get_events', function(){
 	$events = new Event();
-	echo json_encode($events->get_event_names());
+	echo json_encode(array('suggestions' => $events->get_event_names()));
 });
 
 // end routes
