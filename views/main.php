@@ -1,5 +1,3 @@
-<p><?php echo $message ?></p>
-
 <link href="/resources/style-main.css" rel="stylesheet" type="text/css">
 
 <div class="search-wrapper">
@@ -17,11 +15,13 @@
 
 	<div class="event-wrapper">
 		<a href="" class="event-a">
-			<img class="event-photo" src="http://placehold.it/90x90">
-			<div class="event-title">Event Title</div>
-			<div class="event-date">Saturday, October 19th at 10:00PM</div>
-			<div class="event-location">Location Name</div>	
+			<img class="event-photo" src=<?php echo $image ?> <!-- http://placehold.it/90x90 -->
+			<div class="event-title"><?php echo $title ?></div>
+			<div class="event-date"><?php echo $date ?></div>
+			<div class="event-location"><?php echo $location ?></div>	
 		</a>
 	</div>
 
 </div>
+
+<p><?php echo $message ?></p>

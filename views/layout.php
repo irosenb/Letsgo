@@ -16,8 +16,10 @@
 
 <body>
 <div class="background">
+<div class="user-bar">
+Logged in as <div class="user">	<?php echo $login_name ?></div>
 
-	<?php echo $login_content ?>
+</div>
 
 
 	<div class="body-wrapper">
