@@ -1,11 +1,11 @@
 <link href="/resources/style-login.css" rel="stylesheet" type="text/css">
 
 <div class="description-wrapper">
-Welcome to Let's Go! The place to find new friends who like to go to the same events as you!
+Welcome to Let's Go! The place to find new friends who like to go to the same events as you!!
 </div>
 
 <div class="toggle-wrapper">
-	<input type="button" class="toggle-button" id="login-toggle" value="Login">
+	<input type="button" class="toggle-button selected" id="login-toggle" value="Login">
 	<input type="button" class="toggle-button" id="register-toggle" value="Sign Up">
 </div>
 
@@ -35,13 +35,18 @@ Welcome to Let's Go! The place to find new friends who like to go to the same ev
 		$('#login-toggle').click(function(e) {
 			e.preventDefault();
 			$('#registerform').hide();
+			$('#register-toggle').removeClass('selected')
 			$('#loginform').show();
+			$('#login-toggle').addClass('selected');
 		});
 
 		$('#register-toggle').click(function(e) {
 			e.preventDefault();
 			$('#loginform').hide();
+			$('#login-toggle').removeClass('selected')
 			$('#registerform').show();
+			$('#register-toggle').addClass('selected');
+
 		});
 	});
 </script>
