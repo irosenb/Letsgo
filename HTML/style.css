@@ -14,18 +14,15 @@ body{
 	width: 100%;
 	
 	background-color: #ececec;
-	background-image: -webkit-gradient(radial, 50% 100%,100,50% -50%,100, from(rgb(218, 218, 218)), to(rgb(255, 255, 255)));
-	background-image: -webkit-radial-gradient(50% 0%, rgb(255, 255, 255), rgb(218, 218, 218));
-	background-image: -moz-radial-gradient(50% 0%, rgb(255, 255, 255), rgb(218, 218, 218));
-	background-image: radial-gradient(50% 0%, rgb(255, 255, 255), rgb(218, 218, 218));
-
 }
 
 .body-wrapper{
 	
 	width: 80%;
+	min-width: 380px;
 	max-width: 800px;
 	margin: 50px 10%;
+	background-color: #FFFFFF;
 	
 }
 
@@ -46,15 +43,65 @@ body{
 	
 }
 
+.search-wrapper{
+	
+	height: 20px;
+	border: 5px solid #2db522;
+	border-bottom: none;
+	border-top: none;
+	padding: 10px;
+	
+}
+
+.search{
+	
+	font-size: 18px;
+	text-align: center;
+	
+}
+
+.create{
+	
+	margin-top: 10px;
+	width: 40%;
+	height: 25px;
+	margin: 10px 30%;
+
+	background-color: #2db522;
+	
+}
+
+#create-button{
+	
+	width: 100%
+}
+
+#search-box{
+	
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	
+	height: 18px;
+	font-size: 16px;
+
+	
+}
+
 .stream-wrapper{
 	
-		border: 5px solid #2db522;
-		border-bottom: none;
-		border-top: none;
-		min-height: 500px;
+	border: 5px solid #2db522;
+	border-bottom: none;
+	border-top: none;
+	min-height: 400px;
 
 
 }
 
+.footer-wrapper{
+	height: 20px;
+		background-color: #2db522;
+
+}
 
 
