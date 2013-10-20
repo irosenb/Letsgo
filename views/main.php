@@ -82,6 +82,20 @@
 		// $('#search-box').autocomplete({
 		// 	serviceUrl: '/api/get_events'
 		// });
+		
+		var name = <?php echo $login_name ?>;
+			
+		$('.user-bar').hover(
 		function(){
+			$('.lia').hide();
+			$('.user').html('<a href="/logout">Logout</a>');
+		},
+		function(){
+			$('.lia').show();
+			$('.user').html(name);
+		});
+		
+
+		
 	});
 </script>
