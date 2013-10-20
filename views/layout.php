@@ -18,6 +18,8 @@
 <body>
 <div class="background">
 
+	<!-- Here is where the logout button needs to go -->
+
 	<div class="body-wrapper">
 	
 		<div class="header-wrapper">
@@ -26,7 +28,7 @@
 			</div>
 		</div>
 
-
+		<!-- This is the body of the view -->
 		
 		</div>
 
