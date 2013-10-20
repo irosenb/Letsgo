@@ -55,6 +55,7 @@ body{
 
 }
 
+
 /* Footer */
 
 .footer-wrapper{
@@ -79,5 +80,36 @@ body{
 	
 	background-color: #25951d;
 	cursor: hand;
+
+	
+}
+
+
+
+
+#loginform{
+
+	width: 300px;
+	margin: 0px auto;
+	padding-top: 100px;
+
+}
+
+.login-field{
+
+	border: none;
+	outline: none;
+	background-color: #DDDDDD;
+	width: 300px;
+	height: 25px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	text-align: center;;
+
+}
+
+.login-button{
+
+	width: 300px;
 	
 }
