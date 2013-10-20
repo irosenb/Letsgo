@@ -31,9 +31,8 @@
 			$.get('/api/join_event/' + $this.data('eid'), true,
 				function(data, status, xhr) {
 					$('#eventdetail').load('/api/event/' + $this.data('eid'));
-				}
-		
-		)
+				});
+		});
 
 
 </script>
