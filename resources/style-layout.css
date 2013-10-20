@@ -1,46 +1,19 @@
+/*User Bar*/
 
-body{
-	margin: 0px;
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #646464;
+.user-bar{
+	
+	float: right;
+	margin: 5px;
+	font-size: 12px;
 }
 
-.background{
-
-	position: absolute;
-	height: 100%;
-	width: 100%;
+.user{
 	
-	background-color: #ececec;
-}
-
-.body-wrapper{
-	
-	width: 80%;
-	min-width: 380px;
-	max-width: 800px;
-	margin: 50px auto;
-	background-color: #FFFFFF;
-	
-	
-}
-
-/* Header */
-
-.header-wrapper{
-	
-	height: 40px;
-	padding: 10px;
+	display: inline;
+	padding: 1px 6px 2px 6px;
+	border-radius: 4px;
 	background-color: #2db522;
-
-	
-}
-
-.header-text{
 	color: #FFFFFF;
-	text-align: center;
-	font-size: 30px;
-	font-family: 'Kaushan Script', cursive;
 	
 }
 
@@ -145,32 +118,3 @@ body{
 
 	
 }
-/* Footer */
-
-.footer-wrapper{
-	height: 20px;
-		background-color: #2db522;
-
-}
-
-/* Custom IU Elements */
-
-.button{
-	
-	background-color: #2db522;
-	border: none;
-	color: white;
-	height: 25px;
-	font-size: 14px;
-	
-}
-
-.button:hover{
-	
-	background-color: #25951d;
-	cursor: hand;
-	
-}
-
-
-
