@@ -15,7 +15,7 @@
 <?php /*
 	<div class="event-wrapper">
 		<a href="" class="event-a">
-			<img class="event-photo" src=<?php echo $image ?> <!-- http://placehold.it/90x90 -->
+			<!-- <img class="event-photo" src=<?php echo $image ?> <!-- http://placehold.it/90x90 --> -->
 			<div class="event-title"><?php echo $title ?></div>
 			<div class="event-date"><?php echo $date ?></div>
 			<div class="event-location"><?php echo $location ?></div>	
