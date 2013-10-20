@@ -22,3 +22,11 @@
 	<input type="button" class="button" id="signup" value="I'll Go!">
 	
 </div>
+
+<script>
+
+	$(document).ready(function() {
+		$('#signup').click
+
+
+</script>
