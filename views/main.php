@@ -25,7 +25,7 @@
 			<input type="submit" value="Create Event">
 		</form>
 	</div>
-	<a href="#" id="returntosearch">Return to search</a>
+	<input type="button" id="returntosearch" class="button" value="Back to Search">
 </div>
 
 <script>
