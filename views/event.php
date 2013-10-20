@@ -19,14 +19,21 @@
 	<h3>Who's coming?</h3>
 	<div><?php echo implode(', ', $attendees); ?></div>
 	
-	<input type="button" class="button" id="signup" value="I'll Go!">
+	<input type="button" class="button" id="signup" value="I'll Go!" data-eid="<?php echo $eid; ?>">
 	
 </div>
 
 <script>
 
 	$(document).ready(function() {
-		$('#signup').click
+		$('#signup').click(function(e){
+			$this = $(this);
+			$.get('/api/join_event/' + $this.data('eid'), true,
+				function(data, status, xhr) {
+					$('#eventdetail').load('/api/event/' + $this.data('eid'));
+				}
+		
+		)
 
 
 </script>
