@@ -1,6 +1,4 @@
 
-
-
 body{
 	margin: 0px;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -21,10 +19,13 @@ body{
 	width: 80%;
 	min-width: 380px;
 	max-width: 800px;
-	margin: 50px 10%;
+	margin: 50px auto;
 	background-color: #FFFFFF;
 	
+	
 }
+
+/* Header */
 
 .header-wrapper{
 	
@@ -43,13 +44,15 @@ body{
 	
 }
 
+/* Search/Create */
+
 .search-wrapper{
 	
-	height: 20px;
 	border: 5px solid #2db522;
 	border-bottom: none;
 	border-top: none;
 	padding: 10px;
+
 	
 }
 
@@ -86,6 +89,8 @@ body{
 	
 }
 
+/* Event Stream */
+
 .stream-wrapper{
 	
 	border: 5px solid #2db522;
@@ -96,11 +101,59 @@ body{
 
 }
 
+/* Event Elements */
+
+.event-wrapper{
+	margin: 0px 10px;
+	height: 100px;
+	border-bottom: 1px solid #2db522
+	
+}
+
+.event-a{
+	text-decoration: none;
+	color: #2db522;
+}
+
+.event-a:hover{
+	text-decoration: underline;	
+
+}
+
+.event-photo{
+	float: left;
+	margin-right: 10px;
+	
+}
+
+.event-title{
+	color: #2db522;
+	font-size: 18px;
+	
+}
+
+.event-date{
+	color: #646464;
+	font-size: 14px;
+
+	
+}
+
+.event-location{
+	color: #646464;
+	font-size: 16px;
+
+	
+}
+/* Footer */
+
 .footer-wrapper{
 	height: 20px;
 		background-color: #2db522;
 
 }
+
+/* Custom IU Elements */
 
 .button{
 	
@@ -118,5 +171,6 @@ body{
 	cursor: hand;
 	
 }
+
 
 
