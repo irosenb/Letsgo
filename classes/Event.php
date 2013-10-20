@@ -10,7 +10,8 @@ class Event {
 
 	public function get_events() {
 		$sql = "SELECT * FROM events";
-		$query = $this->db->prepare($sql)->execute();
+		$query = $this->db->prepare($sql);
+		$query->execute();
 		return $query->fetchAll();
 	}
 
@@ -24,6 +25,7 @@ class Event {
 				array_push($names, $event['title']);
 			}
 		}
+		
 		return $names;
 	}
 }

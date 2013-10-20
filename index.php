@@ -40,6 +40,14 @@ Flight::route('GET /logout', function(){
 	Flight::redirect('/');
 });
 
+Flight::route('/api/*', function(){
+	if(isset($_SESSION['uid']) && $_SESSION['uid'] != 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
 Flight::route('/api/get_events', function(){
 	$events = new Event();
 	echo json_encode(array('suggestions' => $events->get_event_names()));
