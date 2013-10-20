@@ -1,4 +1,3 @@
-<?php echo $content ?>
 
 <!DOCTYPE html>
 
@@ -10,7 +9,7 @@
 <head>
 	
 	<title>Let's Go!</title>
-	<link href="style-layout.css" rel="stylesheet" type="text/css">
+	<link href="/resources/style-layout.css" rel="stylesheet" type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Kaushan+Script' rel='stylesheet' type='text/css'>
 
 </head>
@@ -18,7 +17,8 @@
 <body>
 <div class="background">
 
-	<!-- Here is where the logout button needs to go -->
+	<?php echo $login_content ?>
+
 
 	<div class="body-wrapper">
 	
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<!-- This is the body of the view -->
+		<?php echo $content ?>
 		
 		</div>
 
