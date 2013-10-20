@@ -27,12 +27,14 @@ Flight::route('GET /', function(){
 
 Flight::route('POST /login', function(){
 	$auth = new User();
-	$auth = $auth->authenticate($_POST['email'], $_POST['password']);
-	if($auth) {
-		$_SESSION['uid'] = $auth;
-		Flight::redirect('/');
-	} else {
-		Flight::redirect('/');
+	if($_POST['login']) {
+		$auth = $auth->authenticate($_POST['email'], $_POST['password']);
+		if($auth) {
+			$_SESSION['uid'] = $auth;
+			Flight::redirect('/');
+		} else {
+			Flight::redirect('/');
+		}
 	}
 });
 
