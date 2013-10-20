@@ -31,7 +31,7 @@
 
 .search{
 	
-	font-size: 18px;
+	font-size: 28px;
 	text-align: center;
 	
 }
@@ -56,8 +56,8 @@
 	border-bottom: 1px solid #646464;
 	outline: none;
 	color: #2db522;
-	height: 18px;
-	font-size: 16px;
+	height: 28px;
+	font-size: 28px;
 
 	
 }
@@ -117,4 +117,28 @@
 	font-size: 16px;
 
 	
+}
+
+/* misc text */
+#results p {
+	padding: 10px 25px;
+	margin: 0;
+}
+
+/* Create event form */
+#newevent {
+	text-align: center;
+	padding: 5px;
+}
+
+#newevent label {
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+	text-align: right;
+}
+
+#newevent input[type=text], #newevent textarea {
+	width: 240px;
 }

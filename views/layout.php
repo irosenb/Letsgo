@@ -23,23 +23,14 @@
 		<div class="header-wrapper">
 			<div class="header-text">
 				Let's Go!
-			</div>
+			</div>		
+		</div>
 
 		<?php echo $content ?>
-		
-		</div>
 
-			<div class="footer-wrapper"></div>
-			
-		</div>
+		<div class="footer-wrapper"></div>
+		
 	</div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/resources/jquery.autocomplete.js"></script>
-<script>
-	$('#search-box').autocomplete({
-		serviceUrl: '/api/get_events'
-	})
-</script>
 </body>
 
 </html>

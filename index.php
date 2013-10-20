@@ -54,6 +54,26 @@ Flight::route('/api/get_events', function(){
 	echo json_encode(array('suggestions' => $events->get_event_names()));
 });
 
+Flight::route('/api/search', function(){
+	$query = Flight::request()->query['query'];
+	$results = new Event();
+	$results = $results->search($query);
+	Flight::render('search_results', array('results' => $results));
+});
+
+Flight::route('/api/event/@eid:[0-9]+', function($eid){
+	$event = new Event($eid);
+	$event = $event->get_event();
+	Flight::render('event', $event);
+});
+
+Flight::route('POST /api/create_event', function(){
+	$new = new Event();
+	$time_start = str_replace("T", " ", $_POST['time_start']);
+	$time_end = str_replace("T", " ", $_POST['time_end']);
+	echo $new->create_event($_POST['title'], $_POST['description'], $_POST['location'], $time_start, $time_end);
+});
+
 // end routes
 
 Flight::start();
