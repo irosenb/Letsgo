@@ -4,14 +4,13 @@ class Event {
 	private $db;
 
 	public function __construct() {
-		$database = new Database();
-		$this->db = $database->db;
+		$db = new Database();
+		$this->db = $db->db;
 	}
 
 	public function get_events() {
 		$sql = "SELECT * FROM events";
-		$query = $this->db->prepare($sql);
-		$query->execute();
+		$query = $this->db->prepare($sql)->execute();
 		return $query->fetchAll();
 	}
 
